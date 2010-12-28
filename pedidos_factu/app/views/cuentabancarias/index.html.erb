@@ -1,0 +1,26 @@
+<h1>Listing cuentabancarias</h1>
+
+<table>
+  <tr>
+    <th>Numerocuenta</th>
+    <th>Proveedor</th>
+    <th>Tipocuenta</th>
+    <th>Entidadfinanciera</th>
+  </tr>
+
+<% @cuentabancarias.each do |cuentabancaria| %>
+  <tr>
+    <td><%=h cuentabancaria.numerocuenta %></td>
+    <td><%=h cuentabancaria.proveedor_id %></td>
+    <td><%=h cuentabancaria.tipocuenta_id %></td>
+    <td><%=h cuentabancaria.entidadfinanciera_id %></td>
+    <td><%= link_to 'Show', cuentabancaria %></td>
+    <td><%= link_to 'Edit', edit_cuentabancaria_path(cuentabancaria) %></td>
+    <td><%= link_to 'Destroy', cuentabancaria, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New cuentabancaria', new_cuentabancaria_path %>

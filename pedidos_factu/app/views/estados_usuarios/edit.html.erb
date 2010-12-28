@@ -1,0 +1,16 @@
+<h1>Editing estados_usuario</h1>
+
+<% form_for(@estados_usuario) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :descripcionEstado %><br />
+    <%= f.text_field :descripcionEstado %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @estados_usuario %> |
+<%= link_to 'Back', estados_usuarios_path %>

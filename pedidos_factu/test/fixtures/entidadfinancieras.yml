@@ -1,0 +1,7 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+bisa:
+  nombreEntidad: BANCO BISA
+
+bnb:
+  nombreEntidad: BANCO NACIONAL DE BOLIVIA

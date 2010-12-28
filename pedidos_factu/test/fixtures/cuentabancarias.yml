@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  numerocuenta: 1
+  proveedor_id: 1
+  tipocuenta_id: 1
+  entidadfinanciera_id: 1
+
+two:
+  numerocuenta: 1
+  proveedor_id: 1
+  tipocuenta_id: 1
+  entidadfinanciera_id: 1

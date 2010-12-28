@@ -1,0 +1,24 @@
+<h1>Listing unidad_beneficiarias</h1>
+
+<table>
+  <tr>
+    <th>Nombre</th>
+    <th>Direccion</th>
+    <th>Telefono</th>
+  </tr>
+
+<% @unidad_beneficiarias.each do |unidad_beneficiaria| %>
+  <tr>
+    <td><%=h unidad_beneficiaria.nombre %></td>
+    <td><%=h unidad_beneficiaria.direccion_id %></td>
+    <td><%=h unidad_beneficiaria.telefono_id %></td>
+    <td><%= link_to 'Show', unidad_beneficiaria %></td>
+    <td><%= link_to 'Edit', edit_unidad_beneficiaria_path(unidad_beneficiaria) %></td>
+    <td><%= link_to 'Destroy', unidad_beneficiaria, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New unidad_beneficiaria', new_unidad_beneficiaria_path %>

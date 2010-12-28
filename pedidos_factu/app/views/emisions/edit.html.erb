@@ -1,0 +1,16 @@
+<h1>Editing emision</h1>
+
+<% form_for(@emision) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :tipoEmision %><br />
+    <%= f.text_field :tipoEmision %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @emision %> |
+<%= link_to 'Back', emisions_path %>

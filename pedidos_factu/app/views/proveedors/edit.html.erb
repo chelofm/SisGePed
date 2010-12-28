@@ -1,0 +1,28 @@
+<h1>Editing proveedor</h1>
+
+<% form_for(@proveedor) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :nit %><br />
+    <%= f.text_field :nit %>
+  </p>
+  <p>
+    <%= f.label :cuentaban %><br />
+    <%= f.text_field :cuentaban %>
+  </p>
+  <p>
+    <%= f.label :direccion_id %><br />
+    <%= f.text_field :direccion_id %>
+  </p>
+  <p>
+    <%= f.label :usuario_id %><br />
+    <%= f.text_field :usuario_id %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @proveedor %> |
+<%= link_to 'Back', proveedors_path %>

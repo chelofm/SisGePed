@@ -1,0 +1,20 @@
+<h1>Listing gestions</h1>
+
+<table>
+  <tr>
+    <th>Anio</th>
+  </tr>
+
+<% @gestions.each do |gestion| %>
+  <tr>
+    <td><%=h gestion.anio %></td>
+    <td><%= link_to 'Show', gestion %></td>
+    <td><%= link_to 'Edit', edit_gestion_path(gestion) %></td>
+    <td><%= link_to 'Destroy', gestion, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New gestion', new_gestion_path %>

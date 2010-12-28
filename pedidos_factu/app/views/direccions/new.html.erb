@@ -1,0 +1,23 @@
+<h1>New direccion</h1>
+
+<% form_for(@direccion) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :calle %><br />
+    <%= f.text_field :calle %>
+  </p>
+  <p>
+    <%= f.label :numero %><br />
+    <%= f.text_field :numero %>
+  </p>
+  <p>
+    <%= f.label :ciudad_id %><br />
+    <%= f.text_field :ciudad_id %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', direccions_path %>

@@ -1,0 +1,16 @@
+<h1>Editing vigencia</h1>
+
+<% form_for(@vigencia) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :vigente %><br />
+    <%= f.check_box :vigente %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @vigencia %> |
+<%= link_to 'Back', vigencias_path %>

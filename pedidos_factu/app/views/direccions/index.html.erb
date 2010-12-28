@@ -1,0 +1,24 @@
+<h1>Listing direccions</h1>
+
+<table>
+  <tr>
+    <th>Calle</th>
+    <th>Numero</th>
+    <th>Ciudad</th>
+  </tr>
+
+<% @direccions.each do |direccion| %>
+  <tr>
+    <td><%=h direccion.calle %></td>
+    <td><%=h direccion.numero %></td>
+    <td><%=h direccion.ciudad_id %></td>
+    <td><%= link_to 'Show', direccion %></td>
+    <td><%= link_to 'Edit', edit_direccion_path(direccion) %></td>
+    <td><%= link_to 'Destroy', direccion, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New direccion', new_direccion_path %>

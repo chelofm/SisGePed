@@ -1,0 +1,16 @@
+<h1>Editing solicitante</h1>
+
+<% form_for(@solicitante) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :usuario_id %><br />
+    <%= f.text_field :usuario_id %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @solicitante %> |
+<%= link_to 'Back', solicitantes_path %>

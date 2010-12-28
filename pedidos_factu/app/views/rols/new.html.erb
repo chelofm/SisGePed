@@ -1,0 +1,15 @@
+<h1>New rol</h1>
+
+<% form_for(@rol) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :tiporol %><br />
+    <%= f.text_field :tiporol %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', rols_path %>

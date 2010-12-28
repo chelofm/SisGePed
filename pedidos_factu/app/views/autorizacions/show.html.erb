@@ -1,0 +1,74 @@
+<h1>DETALLE PEDIDO</h1>
+
+<div>DATOS PEDIDO<hr /></div>
+<p>
+  <b>NRO PEDIDO:</b>
+  <%=h @pedido.id.to_s %>
+</p>
+
+<p>
+  <b>FECHA:</b>
+  <%=h @pedido.fecha.strftime("%d/%m/%Y") %>
+</p>
+
+<div>
+  <hr />
+    DATOS PROVEEDOR
+<p>
+  <b>PROVEEDOR:</b>
+  <%=h @pedido.proveedor.nombreProveedor %>
+</p>
+<hr />
+</div>
+
+<p>
+  <b>TIPO EMISION:</b>
+  <%=h @pedido.emision.tipoEmision %>
+</p>
+
+<div>
+  <div style="text-align: center"><hr />DETALLE ITEMS</div>
+  <table border="1">
+    <thead>
+      <th>NRO</th>
+      <th>CANTIDAD</th>
+      <th>UNIDAD</th>
+      <th>DESCRIPCION</th>
+      <th>PRECIO UNITARIO</th>
+      <th>IMPORTE TOTAL</th>
+    </thead>
+    <%   num = 1
+         @pedido.itempedidos.each do |item| %>
+      <tr>
+        <td><%= num  %> </td>
+        <td><%= item.cantidad  %> </td>
+        <td><%= item.unidad  %> </td>
+        <td><%= item.descripcion  %> </td>
+        <td><%= item.precioUnidad  %> </td>
+        <td><%= item.importeTotal  %> </td>
+      </tr>
+    <%  num += 1
+        end %>
+  </table>
+  <hr />
+</div>
+<div>DATOS AUTORIZACIÓN</div>
+<p>
+  <b>FECHA:</b>
+  <%= @autorizacion.fecha.strftime("%d/%m/%Y")  %>
+</p>
+<p>
+  <b>ESTADO PEDIDO:</b>
+  <%=h @autorizacion.estado_pedido.descripcionEstado  %>
+</p>
+<p>
+  <b>OBSERVACIÓN:</b>
+  <%=h @autorizacion.obs %>
+</p>
+
+<div align="center">
+  <%= link_to 'Autorizar', :action => "define_estado_pedido", :id => @pedido.id, :estado => "A" %> |
+  <%= link_to 'No Autorizar', :action => "define_estado_pedido" , :id => @pedido.id, :estado => "NA" %>
+</div>
+
+<%= link_to 'Atrás', autorizacions_path %>

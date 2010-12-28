@@ -1,0 +1,16 @@
+<h1>Editing estado_autorizacion</h1>
+
+<% form_for(@estado_autorizacion) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :estado %><br />
+    <%= f.text_field :estado %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @estado_autorizacion %> |
+<%= link_to 'Back', estado_autorizacions_path %>

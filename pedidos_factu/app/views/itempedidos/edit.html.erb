@@ -1,0 +1,32 @@
+<h1>Editing itempedido</h1>
+
+<% form_for(@itempedido) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :cantidad %><br />
+    <%= f.text_field :cantidad %>
+  </p>
+  <p>
+    <%= f.label :precioUnidad %><br />
+    <%= f.text_field :precioUnidad %>
+  </p>
+  <p>
+    <%= f.label :importeTotal %><br />
+    <%= f.text_field :importeTotal %>
+  </p>
+  <p>
+    <%= f.label :unidad_id %><br />
+    <%= f.text_field :unidad_id %>
+  </p>
+  <p>
+    <%= f.label :pedido_id %><br />
+    <%= f.text_field :pedido_id %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @itempedido %> |
+<%= link_to 'Back', itempedidos_path %>

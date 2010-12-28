@@ -1,0 +1,23 @@
+<p>
+  <b>Numerocuenta:</b>
+  <%=h @cuentabancaria.numerocuenta %>
+</p>
+
+<p>
+  <b>Proveedor:</b>
+  <%=h @cuentabancaria.proveedor_id %>
+</p>
+
+<p>
+  <b>Tipocuenta:</b>
+  <%=h @cuentabancaria.tipocuenta_id %>
+</p>
+
+<p>
+  <b>Entidadfinanciera:</b>
+  <%=h @cuentabancaria.entidadfinanciera_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_cuentabancaria_path(@cuentabancaria) %> |
+<%= link_to 'Back', cuentabancarias_path %>

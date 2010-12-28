@@ -1,0 +1,28 @@
+<p>
+  <b>Cantidad:</b>
+  <%=h @itempedido.cantidad %>
+</p>
+
+<p>
+  <b>Preciounidad:</b>
+  <%=h @itempedido.precioUnidad %>
+</p>
+
+<p>
+  <b>Importetotal:</b>
+  <%=h @itempedido.importeTotal %>
+</p>
+
+<p>
+  <b>Unidad:</b>
+  <%=h @itempedido.unidad_id %>
+</p>
+
+<p>
+  <b>Pedido:</b>
+  <%=h @itempedido.pedido_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_itempedido_path(@itempedido) %> |
+<%= link_to 'Back', itempedidos_path %>

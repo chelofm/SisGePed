@@ -1,0 +1,16 @@
+<h1>Editing entidadfinanciera</h1>
+
+<% form_for(@entidadfinanciera) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :nombreentidad %><br />
+    <%= f.text_field :nombreentidad %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @entidadfinanciera %> |
+<%= link_to 'Back', entidadfinancieras_path %>

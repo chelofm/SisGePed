@@ -1,0 +1,40 @@
+<h1>Editing usuario</h1>
+
+<% form_for(@usuario) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :nombre %><br />
+    <%= f.text_field :nombre %>
+  </p>
+  <p>
+    <%= f.label :correoe %><br />
+    <%= f.text_field :correoe %>
+  </p>
+  <p>
+    <%= f.label :nombreUsuario %><br />
+    <%= f.text_field :nombreUsuario %>
+  </p>
+  <p>
+    <%= f.label :password %><br />
+    <%= f.text_field :password %>
+  </p>
+  <p>
+    <%= f.label :vigencia_id %><br />
+    <%= f.text_field :vigencia_id %>
+  </p>
+  <p>
+    <%= f.label :rol_id %><br />
+    <%= f.text_field :rol_id %>
+  </p>
+  <p>
+    <%= f.label :telefono_id %><br />
+    <%= f.text_field :telefono_id %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @usuario %> |
+<%= link_to 'Back', usuarios_path %>

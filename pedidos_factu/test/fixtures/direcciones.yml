@@ -1,0 +1,6 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  calle: sin calle
+  numero: s/n
+  ciudad_id: 1

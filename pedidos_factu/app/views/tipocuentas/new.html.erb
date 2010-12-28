@@ -1,0 +1,15 @@
+<h1>New tipocuenta</h1>
+
+<% form_for(@tipocuenta) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :descripciontipo %><br />
+    <%= f.text_field :descripciontipo %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', tipocuentas_path %>

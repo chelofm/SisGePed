@@ -1,0 +1,57 @@
+<div align="center">DETALLE PEDIDO</div>
+<p>
+  <b>NRO PEDIDO:</b>
+  <%=h @pedido.id.to_s %>
+</p>
+
+<p>
+  <b>FECHA:</b>
+  <%=h @pedido.fecha.strftime("%d/%m/%Y") %>
+</p>
+
+<div>
+  DATOS PROVEEDOR
+<p>
+  <b>PROVEEDOR:</b>
+  <%=h @pedido.proveedor.nombreProveedor %>
+</p>
+</div>
+
+<p>
+  <b>TIPO EMISION:</b>
+  <%=h @pedido.emision.tipoEmision %>
+</p>
+
+<div>
+  <div style="text-align: center">DETALLE ITEMS</div>
+  <table border="1">
+    <thead>
+      <th>NRO</th>
+      <th>CANTIDAD</th>
+      <th>UNIDAD</th>
+      <th>DESCRIPCION</th>
+      <th>PRECIO UNITARIO</th>
+      <th>IMPORTE TOTAL</th>
+    </thead>
+    <%   num = 1
+         @pedido.itempedidos.each do |item| %>
+      <tr>
+        <td><%= num  %> </td>
+        <td><%= item.cantidad  %> </td>
+        <td><%= item.unidad  %> </td>
+        <td><%= item.descripcion  %> </td>
+        <td><%= item.precioUnidad  %> </td>
+        <td><%= item.importeTotal  %> </td>
+      </tr>
+    <%  num += 1
+        end %>
+  </table>
+</div>
+
+<p>
+  <b>OBSERVACIONES:</b>
+  <%=h @pedido.obs %>
+</p>
+
+<%= link_to 'Editar', edit_pedido_path(@pedido) %> |
+<%= link_to 'Listar Pedidos', pedidos_path %>

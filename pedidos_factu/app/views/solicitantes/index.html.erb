@@ -1,0 +1,20 @@
+<h1>Listing solicitantes</h1>
+
+<table>
+  <tr>
+    <th>Usuario</th>
+  </tr>
+
+<% @solicitantes.each do |solicitante| %>
+  <tr>
+    <td><%=h solicitante.usuario_id %></td>
+    <td><%= link_to 'Show', solicitante %></td>
+    <td><%= link_to 'Edit', edit_solicitante_path(solicitante) %></td>
+    <td><%= link_to 'Destroy', solicitante, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New solicitante', new_solicitante_path %>

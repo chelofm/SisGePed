@@ -1,0 +1,20 @@
+<h1>Listing tipocuentas</h1>
+
+<table>
+  <tr>
+    <th>Descripciontipo</th>
+  </tr>
+
+<% @tipocuentas.each do |tipocuenta| %>
+  <tr>
+    <td><%=h tipocuenta.descripciontipo %></td>
+    <td><%= link_to 'Show', tipocuenta %></td>
+    <td><%= link_to 'Edit', edit_tipocuenta_path(tipocuenta) %></td>
+    <td><%= link_to 'Destroy', tipocuenta, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New tipocuenta', new_tipocuenta_path %>

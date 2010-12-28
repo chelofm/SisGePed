@@ -1,0 +1,23 @@
+<p>
+  <b>Nit:</b>
+  <%=h @proveedor.nit %>
+</p>
+
+<p>
+  <b>Cuentaban:</b>
+  <%=h @proveedor.cuentaban %>
+</p>
+
+<p>
+  <b>Direccion:</b>
+  <%=h @proveedor.direccion_id %>
+</p>
+
+<p>
+  <b>Usuario:</b>
+  <%=h @proveedor.usuario_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_proveedor_path(@proveedor) %> |
+<%= link_to 'Back', proveedors_path %>

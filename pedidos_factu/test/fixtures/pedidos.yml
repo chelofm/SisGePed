@@ -1,0 +1,19 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  fecha: 2010-12-21
+  obs: MyString
+  emsion_id: 1
+  descripcion_pedido_id: 1
+  estado_pedido_id: 1
+  gestion_id: 1
+  usuario_id: 1
+
+two:
+  fecha: 2010-12-21
+  obs: MyString
+  emsion_id: 1
+  descripcion_pedido_id: 1
+  estado_pedido_id: 1
+  gestion_id: 1
+  usuario_id: 1

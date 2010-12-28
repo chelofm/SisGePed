@@ -1,0 +1,18 @@
+<p>
+  <b>Calle:</b>
+  <%=h @direccion.calle %>
+</p>
+
+<p>
+  <b>Numero:</b>
+  <%=h @direccion.numero %>
+</p>
+
+<p>
+  <b>Ciudad:</b>
+  <%=h @direccion.ciudad_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_direccion_path(@direccion) %> |
+<%= link_to 'Back', direccions_path %>

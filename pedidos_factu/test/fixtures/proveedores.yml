@@ -1,0 +1,8 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  nit: 1
+  nombreProveedor: ICONet
+  telefono_id: 1
+  direccion_id: 1
+

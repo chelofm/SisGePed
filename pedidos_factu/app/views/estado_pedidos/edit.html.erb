@@ -1,0 +1,16 @@
+<h1>Editing estado_pedido</h1>
+
+<% form_for(@estado_pedido) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :nombrePedido %><br />
+    <%= f.text_field :nombrePedido %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @estado_pedido %> |
+<%= link_to 'Back', estado_pedidos_path %>

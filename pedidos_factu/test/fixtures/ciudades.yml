@@ -1,0 +1,28 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  nombre: SUCRE
+
+two:
+  nombre: TARIJA
+
+three:
+  nombre: COCHABAMBA
+
+four:
+  nombre: LA PAZ
+
+five:
+  nombre: SANTA CRUZ
+
+six:
+  nombre: ORURO
+
+seven:
+  nombre: POTOSÍ
+
+eight:
+  nombre: COBIJA
+
+nine:
+  nombre: TRINIDAD

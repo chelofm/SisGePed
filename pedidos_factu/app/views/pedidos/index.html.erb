@@ -1,0 +1,31 @@
+<h1>Listado de Pedidos</h1>
+
+<table border="1">
+  <tr>
+    <th>NRO PEDIDO</th>
+    <th>FECHA</th>
+    <th>PROVEEDOR</th>
+    <th>CANT. ITEMS</th>
+    <th>ESTADO PEDIDO</th>
+    <th>&nbsp;</th>
+    <th>&nbsp;</th>
+    <th>&nbsp;</th>
+  </tr>
+<% @pedidos.each do |pedido| %>
+  <tr>
+    <td align="center"><%=h pedido.id %></td>
+    <td><%=h pedido.fecha.strftime("%d/%m/%Y") %></td>
+    <td><%=h pedido.proveedor.nombreProveedor %></td>
+    <td><%=h pedido.itempedidos.size %></td>
+    <td><%=h pedido.autorizacions.last.estado_pedido.descripcionEstado %></td>
+    <td><%= link_to 'Mostrar Detalle', pedido %></td>
+    <td><%= link_to 'Editar', edit_pedido_path(pedido) %></td>
+    <td><%= link_to 'Borrar', pedido, :confirm => '¿ESTA SEGURO DE BORRAR?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'NUEVO PEDIDO', new_pedido_path %>
+<%= link_to 'ATRÁS', :controller => "home" %>

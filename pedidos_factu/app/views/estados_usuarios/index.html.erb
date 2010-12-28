@@ -1,0 +1,20 @@
+<h1>Listing estados_usuarios</h1>
+
+<table>
+  <tr>
+    <th>Descripcionestado</th>
+  </tr>
+
+<% @estados_usuarios.each do |estados_usuario| %>
+  <tr>
+    <td><%=h estados_usuario.descripcionEstado %></td>
+    <td><%= link_to 'Show', estados_usuario %></td>
+    <td><%= link_to 'Edit', edit_estados_usuario_path(estados_usuario) %></td>
+    <td><%= link_to 'Destroy', estados_usuario, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New estados_usuario', new_estados_usuario_path %>

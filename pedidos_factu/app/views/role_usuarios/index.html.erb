@@ -1,0 +1,18 @@
+<h1>Listing role_usuarios</h1>
+
+<table>
+  <tr>
+  </tr>
+
+<% @role_usuarios.each do |role_usuario| %>
+  <tr>
+    <td><%= link_to 'Show', role_usuario %></td>
+    <td><%= link_to 'Edit', edit_role_usuario_path(role_usuario) %></td>
+    <td><%= link_to 'Destroy', role_usuario, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New role_usuario', new_role_usuario_path %>

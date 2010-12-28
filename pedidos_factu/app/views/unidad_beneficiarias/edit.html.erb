@@ -1,0 +1,24 @@
+<h1>Editing unidad_beneficiaria</h1>
+
+<% form_for(@unidad_beneficiaria) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :nombre %><br />
+    <%= f.text_field :nombre %>
+  </p>
+  <p>
+    <%= f.label :direccion_id %><br />
+    <%= f.text_field :direccion_id %>
+  </p>
+  <p>
+    <%= f.label :telefono_id %><br />
+    <%= f.text_field :telefono_id %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @unidad_beneficiaria %> |
+<%= link_to 'Back', unidad_beneficiarias_path %>

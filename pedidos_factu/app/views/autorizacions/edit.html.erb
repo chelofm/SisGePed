@@ -1,0 +1,32 @@
+<h1>Editing autorizacion</h1>
+
+<% form_for(@autorizacion) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :fecha %><br />
+    <%= f.date_select :fecha %>
+  </p>
+  <p>
+    <%= f.label :obs %><br />
+    <%= f.text_field :obs %>
+  </p>
+  <p>
+    <%= f.label :estado_autorizacion_id %><br />
+    <%= f.text_field :estado_autorizacion_id %>
+  </p>
+  <p>
+    <%= f.label :pedido_id %><br />
+    <%= f.text_field :pedido_id %>
+  </p>
+  <p>
+    <%= f.label :autorizador_id %><br />
+    <%= f.text_field :autorizador_id %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @autorizacion %> |
+<%= link_to 'Back', autorizacions_path %>

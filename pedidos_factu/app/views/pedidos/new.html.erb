@@ -1,0 +1,68 @@
+<div style="margin-left: 150px;">
+  <h1>Registrar Pedido</h1>
+  <% form_for(@pedido) do |f| %>
+    <%= f.error_messages %>
+    <%= error_messages_for 'itempedido' %>
+    <p>
+      <%= f.label :fecha %><br />
+      <%= f.date_select :fecha %>
+    </p>
+    <p>
+      <%= "IVA" %><br />
+      <select name="pedido[emision_id]" id="pedido[emision_id]">
+        <% @emisiones.each do |emision| %>
+          <option value="<%= emision.id %>"><%= emision.tipoEmision %></option>
+        <% end %>
+      </select>
+    </p>
+    <p>
+      <%= "PROVEEDORES" %><br />
+      <select name="pedido[proveedor_id]" id="pedido[proveedor_id]">
+        <% @proveedores.each do |proveedor| %>
+          <option value="<%= proveedor.id  %>"><%= proveedor.nombreProveedor  %></option>
+        <% end %>
+      </select>
+      <%= link_to "REGISTRAR PROVEEDOR", :controller => "proveedors", :action => "new" %>
+    </p>
+    <!-- TABLA CONTENEDORA DE LOS ITEMS DEL PEDIDO -->
+    <table border="1">
+      <caption>ITEM(S) PEDIDO</caption>
+      <thead>
+        <tr>
+          <th><%= image_tag("agregar.png", :alt => "Agregar Item")%></th>
+          <th>N°</th>
+          <th>CANTIDAD</th>
+          <th>UNIDAD</th>
+          <th>DESCRIPCIÓN</th>
+          <th>PRECIO UNITARIO</th>
+          <th>IMPORTE TOTAL</th>
+        </tr>
+      </thead>
+      <tr>
+        <td>&nbsp;</td>
+        <td>1</td>
+        <td><%= text_field(:itempedido, :cantidad, :size => 5 )  %> </td>
+        <td><%= text_field(:itempedido, :unidad, :size => 10)  %> </td>
+        <td><%= text_field(:itempedido, :descripcion, :size => 50)  %> </td>
+        <td><%= text_field(:itempedido, :precioUnidad, :size => 5)  %></td>
+        <td><%= text_field(:itempedido, :importeTotal, :size => 5)  %></td>
+      </tr>
+    </table>
+    <p>
+      <%= f.label :observaciones %><%= @gestion.id  %> <br />
+      <%= text_area :pedido, :obs, :cols => 35, :rows => 4 %>
+    </p>
+    <p><!-- campos ocultos usuario_id, gestion_id -->
+      <%= hidden_field :pedido, :usuario_id, :value => "2" %>
+      <%= hidden_field :pedido, :gestion_id, :value => @gestion.id %>
+      <%= hidden_field :autorizacion, :estado_pedido_id, :value => @estado_pedido.id %>
+      <%= hidden_field :autorizacion, :fecha, :value => Time.now.strftime('%Y-%m-%d')  %>
+      <%= hidden_field :autorizacion, :estadoaut, :value => TRUE  %>
+      <%= hidden_field :autorizacion, :usuario_id, :value => "2" %>
+    </p>
+    <p>
+      <%= f.submit 'Registrar', :confirm => "¿ESTÁ SEGURO DE LOS DATOS?" %>
+    </p>
+  <% end %>
+  <%= link_to '< Atrás', pedidos_path %>
+</div>

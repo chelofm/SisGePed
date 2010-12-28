@@ -1,0 +1,23 @@
+<p>
+  <b>Domicilio:</b>
+  <%=h @telefono.domicilio %>
+</p>
+
+<p>
+  <b>Trabajo:</b>
+  <%=h @telefono.trabajo %>
+</p>
+
+<p>
+  <b>Movil1:</b>
+  <%=h @telefono.movil1 %>
+</p>
+
+<p>
+  <b>Movil2:</b>
+  <%=h @telefono.movil2 %>
+</p>
+
+
+<%= link_to 'Edit', edit_telefono_path(@telefono) %> |
+<%= link_to 'Back', telefonos_path %>

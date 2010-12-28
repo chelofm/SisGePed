@@ -1,0 +1,2 @@
+module TipocuentasHelper
+end

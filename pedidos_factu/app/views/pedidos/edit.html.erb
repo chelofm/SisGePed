@@ -1,0 +1,32 @@
+<h1>Editing pedido</h1>
+
+<% form_for(@pedido) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :fecha %><br />
+    <%= f.date_select :fecha %>
+  </p>
+  <p>
+    <%= f.label :obs %><br />
+    <%= f.text_field :obs %>
+  </p>
+  <p>
+    <%= f.label :emision_id %><br />
+    <%= f.text_field :emision_id %>
+  </p>
+  <p>
+    <%= f.label :gestion_id %><br />
+    <%= f.text_field :gestion_id %>
+  </p>
+  <p>
+    <%= f.label :usuario_id %><br />
+    <%= f.text_field :usuario_id %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @pedido %> |
+<%= link_to 'Back', pedidos_path %>

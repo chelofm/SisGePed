@@ -1,0 +1,18 @@
+<p>
+  <b>Nombre:</b>
+  <%=h @unidad_beneficiaria.nombre %>
+</p>
+
+<p>
+  <b>Direccion:</b>
+  <%=h @unidad_beneficiaria.direccion_id %>
+</p>
+
+<p>
+  <b>Telefono:</b>
+  <%=h @unidad_beneficiaria.telefono_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_unidad_beneficiaria_path(@unidad_beneficiaria) %> |
+<%= link_to 'Back', unidad_beneficiarias_path %>

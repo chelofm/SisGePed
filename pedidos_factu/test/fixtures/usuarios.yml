@@ -1,0 +1,10 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+GENERICO:
+  nombre: GENERICO
+  correoe: sin correo
+  nombreUsuario: 
+  password: 
+  estados_usuario_id: 1
+  role_id: 3
+  telefono_id: 1

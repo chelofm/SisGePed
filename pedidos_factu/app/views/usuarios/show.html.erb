@@ -1,0 +1,38 @@
+<p>
+  <b>Nombre:</b>
+  <%=h @usuario.nombre %>
+</p>
+
+<p>
+  <b>Correoe:</b>
+  <%=h @usuario.correoe %>
+</p>
+
+<p>
+  <b>Nombreusuario:</b>
+  <%=h @usuario.nombreUsuario %>
+</p>
+
+<p>
+  <b>Password:</b>
+  <%=h @usuario.password %>
+</p>
+
+<p>
+  <b>Vigencia:</b>
+  <%=h @usuario.vigencia_id %>
+</p>
+
+<p>
+  <b>Rol:</b>
+  <%=h @usuario.rol_id %>
+</p>
+
+<p>
+  <b>Telefono:</b>
+  <%=h @usuario.telefono_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_usuario_path(@usuario) %> |
+<%= link_to 'Back', usuarios_path %>

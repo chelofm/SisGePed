@@ -1,0 +1,32 @@
+<h1>AUTORIZACIÓN DE PEDIDOS</h1>
+
+<table border="1">
+  <caption>LISTADO DE PEDIDOS SIN AUTORIZACIÓN O NO AUTORIZADOS</caption>
+  <tr>
+    <th>NRO PEDIDO</th>
+    <th>FECHA</th>
+    <th>PROVEEDOR</th>
+    <th>CANT. ITEMS</th>
+    <th>ESTADO PEDIDO</th>
+    <th>OBS. AUTORIZACIÓN</th>
+    <th>&nbsp;</th>
+    <th>&nbsp;</th>
+    <th>&nbsp;</th>
+  </tr>
+<% @autorizacions.each do |autorizacion| %>
+  <tr>
+    <td align="center"><%=h autorizacion.idpedido %></td>
+    <td><%=h autorizacion.fechapedido %> </td>
+    <td><%= autorizacion.proveedor.nombreProveedor %> </td>
+    <td><%=h autorizacion.itempedidos.size %> </td>
+    <td><%=h autorizacion.descripcionEstado %> </td>
+    <td><%=h autorizacion.obsaut %> </td>
+    <td><%= link_to 'Mostrar Detalle', :action => "show", :idPedido => autorizacion.idpedido, :id => autorizacion.idaut %></td>
+    <td><%= link_to 'Autorizar', :action => "define_estado_pedido", :id => autorizacion.idpedido, :estado => "A" %></td>
+    <td><%= link_to 'No Autorizar', :action => "define_estado_pedido" , :id => autorizacion.idpedido, :estado => "NA" %></td>
+  </tr>
+<% end %>
+</table>
+<br />
+
+<%= link_to 'ATRÁS', :controller => "home" %>

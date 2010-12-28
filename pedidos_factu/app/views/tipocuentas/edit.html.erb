@@ -1,0 +1,16 @@
+<h1>Editing tipocuenta</h1>
+
+<% form_for(@tipocuenta) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :descripciontipo %><br />
+    <%= f.text_field :descripciontipo %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @tipocuenta %> |
+<%= link_to 'Back', tipocuentas_path %>

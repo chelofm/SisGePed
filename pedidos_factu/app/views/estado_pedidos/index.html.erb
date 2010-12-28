@@ -1,0 +1,20 @@
+<h1>Listing estado_pedidos</h1>
+
+<table>
+  <tr>
+    <th>Nombrepedido</th>
+  </tr>
+
+<% @estado_pedidos.each do |estado_pedido| %>
+  <tr>
+    <td><%=h estado_pedido.nombrePedido %></td>
+    <td><%= link_to 'Show', estado_pedido %></td>
+    <td><%= link_to 'Edit', edit_estado_pedido_path(estado_pedido) %></td>
+    <td><%= link_to 'Destroy', estado_pedido, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New estado_pedido', new_estado_pedido_path %>

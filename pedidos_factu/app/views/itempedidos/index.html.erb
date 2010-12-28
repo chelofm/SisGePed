@@ -1,0 +1,28 @@
+<h1>Listing itempedidos</h1>
+
+<table>
+  <tr>
+    <th>Cantidad</th>
+    <th>Preciounidad</th>
+    <th>Importetotal</th>
+    <th>Unidad</th>
+    <th>Pedido</th>
+  </tr>
+
+<% @itempedidos.each do |itempedido| %>
+  <tr>
+    <td><%=h itempedido.cantidad %></td>
+    <td><%=h itempedido.precioUnidad %></td>
+    <td><%=h itempedido.importeTotal %></td>
+    <td><%=h itempedido.unidad_id %></td>
+    <td><%=h itempedido.pedido_id %></td>
+    <td><%= link_to 'Show', itempedido %></td>
+    <td><%= link_to 'Edit', edit_itempedido_path(itempedido) %></td>
+    <td><%= link_to 'Destroy', itempedido, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New itempedido', new_itempedido_path %>

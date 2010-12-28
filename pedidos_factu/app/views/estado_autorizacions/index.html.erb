@@ -1,0 +1,20 @@
+<h1>Listing estado_autorizacions</h1>
+
+<table>
+  <tr>
+    <th>Estado</th>
+  </tr>
+
+<% @estado_autorizacions.each do |estado_autorizacion| %>
+  <tr>
+    <td><%=h estado_autorizacion.estado %></td>
+    <td><%= link_to 'Show', estado_autorizacion %></td>
+    <td><%= link_to 'Edit', edit_estado_autorizacion_path(estado_autorizacion) %></td>
+    <td><%= link_to 'Destroy', estado_autorizacion, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New estado_autorizacion', new_estado_autorizacion_path %>

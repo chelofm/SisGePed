@@ -1,0 +1,9 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  anio: 2009
+  vigencia: FALSE
+
+two:
+  anio: 2010
+  vigencia: TRUE

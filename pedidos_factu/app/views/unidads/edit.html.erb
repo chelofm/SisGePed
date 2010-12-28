@@ -1,0 +1,16 @@
+<h1>Editing unidad</h1>
+
+<% form_for(@unidad) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :tipoUnidad %><br />
+    <%= f.text_field :tipoUnidad %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @unidad %> |
+<%= link_to 'Back', unidads_path %>

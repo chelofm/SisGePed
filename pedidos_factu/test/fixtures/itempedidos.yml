@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  cantidad: 1.5
+  precioUnidad: 1.5
+  importeTotal: 1.5
+  unidad_id: 1
+  pedido_id: 1
+
+two:
+  cantidad: 1.5
+  precioUnidad: 1.5
+  importeTotal: 1.5
+  unidad_id: 1
+  pedido_id: 1

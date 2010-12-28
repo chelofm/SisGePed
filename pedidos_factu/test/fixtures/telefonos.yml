@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  domicilio: 1
+  trabajo: 1
+  movil1: 1
+  movil2: 1
+
+two:
+  domicilio: 1
+  trabajo: 1
+  movil1: 1
+  movil2: 1
